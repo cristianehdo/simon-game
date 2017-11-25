@@ -10,7 +10,8 @@ const numbers = ["one", "two", "three", "four"];
 const getSelectedCard = (card) => {
   numbers.forEach((number) => {
     if (card.classList.contains(number)) {
-       verifySequence(number);
+      animateCard(card, number);
+      verifySequence(number);
     }
   });
 };
