@@ -1,1 +1,19 @@
-button.css
+.my-btn {
+  text-decoration: none;
+  padding: 12px 22px;
+  width: 72px;
+  height: 37px;
+  display: flex;
+  align-items: center;
+}
+
+.my-btn:hover {
+  box-shadow: 0 0 3px grey;
+}
+
+.my-btn-transparent {
+  border: 1px solid #9F9CAC;
+  border-radius: 30px;
+  color: #9F9CAC;
+  opacity: 0.8;
+}

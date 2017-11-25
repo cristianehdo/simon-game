@@ -1,14 +1,20 @@
-const one = document.querySelector(".one");
-const two = document.querySelector(".two");
-const three = document.querySelector(".three");
-const four = document.querySelector(".four");
-const cards = document.querySelectorAll(".card");
-const numbers = ["one", "two", "three", "four"];
 
+const CARDS = {
+ "one": document.querySelector(".one"),
+ "two": document.querySelector(".two"),
+ "three": document.querySelector(".three"),
+ "four": document.querySelector(".four")
+}
+ const cards = document.querySelectorAll(".card");
+ const start = document.getElementById("start");
+ const NUMBERS = ["zero", "one", "two", "three", "four"];
 
+start.addEventListener("click", () => {
+  startGame();
+});
 
 const getSelectedCard = (card) => {
-  numbers.forEach((number) => {
+  NUMBERS.forEach((number) => {
     if (card.classList.contains(number)) {
       animateCard(card, number);
       verifySequence(number);
@@ -18,6 +24,8 @@ const getSelectedCard = (card) => {
 
 cards.forEach((card) => {
   card.addEventListener("click", (event) => {
-    getSelectedCard(event.currentTarget);
+    if (USER_TURN === true) {
+      getSelectedCard(event.currentTarget);
+    }
   });
 });
