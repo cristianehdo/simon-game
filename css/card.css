@@ -1,0 +1,44 @@
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(200px, auto);
+  grid-template-columns: 200px;
+}
+
+.card {
+  height: 200px;
+  width: 200px;
+  border-radius: 28px;
+  transition: all 0.15s ease;
+  opacity: 0.8;
+}
+
+.card:hover {
+  opacity: 0.9;
+}
+
+
+.one {
+  background-color: #B4F4ED;
+  grid-column: 1 ;
+  grid-row: 2;
+}
+
+.two {
+  background-color: #2E1735;
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.three {
+  background-color: #BD0053;
+  grid-column: 1;
+  grid-row: 3;
+}
+
+.four {
+  background-color: #FDC273;
+  grid-column: 2;
+  grid-row: 3;
+}
