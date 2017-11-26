@@ -73,7 +73,10 @@ const verifySequence = (number) => { //number is as string "one"...
   if (sequence.length == sequenceIndex) {
     USER_TURN = false;
     sequenceIndex = 0;
-    incrementSequence();
+    setTimeout(function () {
+      incrementSequence();
+    }, 500);
+
   }
 }
 
@@ -90,8 +93,6 @@ const displaySequence = (sequence) => {
       stopInterval();
     }
   }
-  setTimeout(function () {
-  }, 700);
   let interval = setInterval(playCard, SPEED);
   const stopInterval = () => {
     clearInterval(interval);
