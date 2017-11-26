@@ -5,12 +5,14 @@ let rightNumber;
 let count;
 let sequenceIndex;
 let USER_TURN = false;
+let SPEED = 1000;
 const soundUrl = {
   "one": "https://s3.amazonaws.com/freecodecamp/simonSound1.mp3",
   "two": "https://s3.amazonaws.com/freecodecamp/simonSound2.mp3",
   "three": "https://s3.amazonaws.com/freecodecamp/simonSound3.mp3",
   "four": "https://s3.amazonaws.com/freecodecamp/simonSound4.mp3"
 }
+
 
 const makeSound = (number) => {
   let url = soundUrl[number];
@@ -55,18 +57,20 @@ const entryIsCorrect = (number) => {
 }
 
 const verifySequence = (number) => { //number is as string "one"...
+  USER_TURN = false;
   num = convertToInteger(number); //convert to integer
   rightNumber = sequence[sequenceIndex];
   if (entryIsCorrect(num)) {
     sequenceIndex += 1;
+    USER_TURN = true;
   }
   else {
     dislpayCount("!!");
     let soundFail = new Audio("sounds/sound.mp3");
     soundFail.play();
-    USER_TURN = false;
   }
   if (sequence.length == sequenceIndex) {
+    USER_TURN = false;
     sequenceIndex = 0;
     incrementSequence();
   }
@@ -75,6 +79,7 @@ const verifySequence = (number) => { //number is as string "one"...
 const displaySequence = (sequence) => {
   let i = 0;
   const playCard = () => {
+    USER_TURN = false;
     let num = sequence[i];
     let cardNum = NUMBERS[num];
     let card = CARDS[cardNum];
@@ -84,11 +89,11 @@ const displaySequence = (sequence) => {
       stopInterval();
     }
   }
-  let interval = setInterval(playCard,1000);
+  let interval = setInterval(playCard, SPEED);
   const stopInterval = () => {
     clearInterval(interval);
+    USER_TURN = true;
   }
-  USER_TURN = true;
 }
 
 const randomNum = () => {
@@ -98,19 +103,20 @@ const randomNum = () => {
 
 // push into sequence array another number from 1 to 4
 const incrementSequence = () => {
+  USER_TURN = false;
   count += 1;
   dislpayCount(count);
   sequence.push(randomNum());
   displaySequence(sequence);
 }
-
+//reset everything and start a new sequence
 const startGame = () => {
   sequence = [];
   count = 0;
   sequenceIndex = 0;
   incrementSequence();
 }
-
+// function to debug
 const debug = () => {
   console.log("use_turn: " + USER_TURN);
   console.log(sequence);

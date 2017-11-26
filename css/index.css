@@ -1,3 +1,8 @@
 @import 'card.css';
 @import 'button.css';
 
+.panel-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

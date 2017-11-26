@@ -5,9 +5,12 @@ const CARDS = {
  "three": document.querySelector(".three"),
  "four": document.querySelector(".four")
 }
- const cards = document.querySelectorAll(".card");
- const start = document.getElementById("start");
- const NUMBERS = ["zero", "one", "two", "three", "four"];
+
+const speedBtn = document.querySelectorAll('.speed');
+
+const cards = document.querySelectorAll(".card");
+const start = document.getElementById("start");
+const NUMBERS = ["zero", "one", "two", "three", "four"];
 
 start.addEventListener("click", () => {
   startGame();
@@ -29,3 +32,23 @@ cards.forEach((card) => {
     }
   });
 });
+
+speedBtn.forEach((btn) => {
+  btn.addEventListener("click", (event) => {
+    clickedBtn = event.currentTarget;
+    speedBtn.forEach((bt) => { //remove disable class from all buttons
+        bt.classList.remove("selected");
+      });
+    clickedBtn.classList.add("selected");
+    if (clickedBtn.classList.contains("easy")){
+      SPEED = 1000;
+    }
+    else if (clickedBtn.classList.contains("medium")){
+      SPEED = 700;
+    }
+    else {
+      SPEED = 600;
+    }
+  });
+});
+

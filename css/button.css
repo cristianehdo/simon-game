@@ -17,3 +17,8 @@
   color: #9F9CAC;
   opacity: 0.8;
 }
+
+.selected {
+  color: black;
+  border: 1px solid black;
+}
