@@ -45,10 +45,10 @@ speedBtn.forEach((btn) => {
       SPEED = 1000;
     }
     else if (clickedBtn.classList.contains("medium")){
-      SPEED = 700;
+      SPEED = 500;
     }
     else {
-      SPEED = 600;
+      SPEED = 300;
     }
   });
 });

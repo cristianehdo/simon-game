@@ -38,6 +38,7 @@
 .buttons {
   display: flex;
   align-items: center;
+  justify-content: space-around;
 }
 .buttons span {
   padding-right: 8px;
@@ -59,3 +60,7 @@
 }
 
 
+.speed-buttons {
+  display: flex;
+  align-items: center;
+}

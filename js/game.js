@@ -6,17 +6,18 @@ let count;
 let sequenceIndex;
 let USER_TURN = false;
 let SPEED = 1000;
-const soundUrl = {
-  "one": "https://s3.amazonaws.com/freecodecamp/simonSound1.mp3",
-  "two": "https://s3.amazonaws.com/freecodecamp/simonSound2.mp3",
-  "three": "https://s3.amazonaws.com/freecodecamp/simonSound3.mp3",
-  "four": "https://s3.amazonaws.com/freecodecamp/simonSound4.mp3"
+const sounds = {
+  "one": "simonSound1.mp3",
+  "two": "simonSound2.mp3",
+  "three": "simonSound3.mp3",
+  "four": "simonSound4.mp3",
+  "failure": "failure.mp3"
 }
 
 
-const makeSound = (number) => {
-  let url = soundUrl[number];
-  let sound = new Audio(url);
+const makeSound = (name) => {
+  let soundPath = sounds[name];
+  let sound = new Audio('sounds/' + soundPath);
     sound.play();
 }
 
@@ -66,8 +67,7 @@ const verifySequence = (number) => { //number is as string "one"...
   }
   else {
     dislpayCount("!!");
-    let soundFail = new Audio("sounds/sound.mp3");
-    soundFail.play();
+    makeSound("failure");
     START.classList.remove("selected");
   }
   if (sequence.length == sequenceIndex) {
@@ -90,6 +90,8 @@ const displaySequence = (sequence) => {
       stopInterval();
     }
   }
+  setTimeout(function () {
+  }, 700);
   let interval = setInterval(playCard, SPEED);
   const stopInterval = () => {
     clearInterval(interval);

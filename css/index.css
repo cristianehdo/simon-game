@@ -9,16 +9,12 @@
   position: relative;
 }
 .my-container h3 {
-  padding: 20px;
+  padding: 10px;
 }
 .panel-card {
   width: 550px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   margin-bottom: 30px;
 }
-
 
 @media (max-width: 640px) {
   .my-container {
@@ -30,7 +26,6 @@
     justify-content: space-around;
   }
 }
-
 
 @media (max-width: 360px) {
   .my-container {

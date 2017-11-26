@@ -1,6 +1,7 @@
 <html>
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"> -->
     <link rel="stylesheet" href="css/index.css">
@@ -9,14 +10,24 @@
   <div class="my-container">
     <h3>Simon Game</h3>
     <div class="panel-card">
-      <div class="buttons">
-        <div class="my-btn my-green-btn" id="start">Start</div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="buttons">
+            <div class="my-btn my-green-btn" id="start">Start</div>
+          </div>
+        </div>
       </div>
-      <div class="buttons">
-        <span>Speed:</span>
-          <div class="my-btn my-btn-transparent speed" id="easy">slow</div>
-          <div class="my-btn my-btn-transparent speed" id="medium">medium</div>
-          <div class="my-btn my-btn-transparent speed" id="hard">fast</div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="buttons">
+            <div class="speed-buttons">
+              <span>Speed:</span>
+              <div class="my-btn my-btn-transparent speed selected" id="easy">slow</div>
+              <div class="my-btn my-btn-transparent speed" id="medium">medium</div>
+              <div class="my-btn my-btn-transparent speed" id="hard">fast</div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <div class="cards">
