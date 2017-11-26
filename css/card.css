@@ -1,10 +1,12 @@
 .cards {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.cards-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
   grid-gap: 10px;
-  grid-auto-rows: minmax(200px, auto);
-  grid-template-columns: 200px;
-  position: relative;
 }
 
 .card {
@@ -13,38 +15,55 @@
   border-radius: 28px;
   transition: all 0.15s ease;
   opacity: 0.8;
-
 }
+
+@media (max-width: 640px) {
+  .cards-grid {
+    grid-gap: 7px;
+  }
+  .card {
+    height: 160px;
+    width: 160px;
+  }
+}
+
+
+@media (max-width: 360px) {
+  .cards-grid {
+    grid-gap: 5px;
+  }
+  .card {
+    height: 130px;
+    width: 130px;
+  }
+}
+
 
 .card-active {
   opacity: 1;
   box-shadow: 0 0 1em grey;
-  position: absolute;
-  top: -1px;
-  left: -1px;
 }
-
 
 .one {
   background-color: #B4F4ED;
   grid-column: 1 ;
-  grid-row: 2;
+  grid-row: 1;
 }
 
 .two {
   background-color: #2E1735;
   grid-column: 2;
-  grid-row: 2;
+  grid-row: 1;
 }
 
 .three {
   background-color: #BD0053;
   grid-column: 1;
-  grid-row: 3;
+  grid-row: 2;
 }
 
 .four {
   background-color: #FDC273;
   grid-column: 2;
-  grid-row: 3;
+  grid-row: 2;
 }

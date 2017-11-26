@@ -38,7 +38,7 @@ const dislpayCount = (count) => {
   while (counter.firstChild) {
     counter.removeChild(counter.firstChild); // cleaning first
   }
-  counter.insertAdjacentHTML("afterbegin", `<span>${count}</span>`)
+  counter.insertAdjacentHTML("afterbegin", count)
 };
 
 // convert number string to integer

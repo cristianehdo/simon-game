@@ -1,10 +1,11 @@
 .my-btn {
   text-decoration: none;
-  padding: 12px 22px;
   width: 72px;
   height: 37px;
   display: flex;
   align-items: center;
+  margin: 3px;
+  justify-content: space-around;
 }
 
 .my-btn:hover {

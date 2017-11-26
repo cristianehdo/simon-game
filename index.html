@@ -6,12 +6,14 @@
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-  <div class="container text-center">
+  <div class="my-container">
     <h2>Simon Game</h2>
     <div class="panel-card">
-      <div class="my-btn my-btn-transparent" id="start"><span>Start</span></div>
+      <div class="buttons">
+        <div class="my-btn my-btn-transparent" id="start">Start</div>
       <div class="my-btn my-btn-transparent" id="count"></div>
-      <div>
+      </div>
+      <div class="buttons">
         <span>Speed:</span>
           <div class="my-btn my-btn-transparent speed" id="easy">slow</div>
           <div class="my-btn my-btn-transparent speed" id="medium">medium</div>
@@ -19,10 +21,12 @@
       </div>
     </div>
     <div class="cards">
-      <div class="card one"></div>
-      <div class="card two"></div>
-      <div class="card three"></div>
-      <div class="card four"></div>
+      <div class="cards-grid">
+        <div class="card one"></div>
+        <div class="card two"></div>
+        <div class="card three"></div>
+        <div class="card four"></div>
+      </div>
     </div>
   </div>
 </body>

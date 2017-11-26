@@ -1,8 +1,50 @@
 @import 'card.css';
 @import 'button.css';
 
+
+.my-container {
+  margin: 0 auto;
+  width: 550px;
+  text-align: center;
+  position: relative;
+}
+.my-container h2 {
+  padding: 30px;
+}
 .panel-card {
+  width: 550px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+}
+.buttons span {
+  padding-right: 8px;
+}
+
+
+@media (max-width: 640px) {
+  .my-container {
+    width: 375px;
+  }
+  .panel-card {
+    width: 375px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
+
+
+@media (max-width: 360px) {
+  .my-container {
+    width: 300px;
+  }
+  .panel-card {
+    width: 300px;
+  }
 }
