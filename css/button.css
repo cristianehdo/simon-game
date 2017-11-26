@@ -1,25 +1,61 @@
 .my-btn {
-  text-decoration: none;
-  width: 72px;
   height: 37px;
   display: flex;
   align-items: center;
   margin: 3px;
+  border-radius: 30px;
   justify-content: space-around;
+  cursor: pointer;
 }
 
-.my-btn:hover {
-  box-shadow: 0 0 3px grey;
+.my-green-btn {
+  width: 80px;
+  border: 1px solid #1ED760;
+  color: #1ED760;
+  margin: 20px;
+}
+
+.my-green-btn:hover {
+  box-shadow: 0 0 3px #1ED760;
 }
 
 .my-btn-transparent {
+  width: 72px;
   border: 1px solid #9F9CAC;
-  border-radius: 30px;
   color: #9F9CAC;
   opacity: 0.8;
+}
+
+.my-btn-transparent:hover {
+  box-shadow: 0 0 3px grey;
 }
 
 .selected {
   color: black;
   border: 1px solid black;
 }
+
+.buttons {
+  display: flex;
+  align-items: center;
+}
+.buttons span {
+  padding-right: 8px;
+}
+
+.count-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#count {
+  width: 80px;
+  border: 1px solid #9F9CAC;
+  color: #9F9CAC;
+  opacity: 0.8;
+  cursor: default;
+  margin-top: 15px;
+}
+
+

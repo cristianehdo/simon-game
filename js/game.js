@@ -68,6 +68,7 @@ const verifySequence = (number) => { //number is as string "one"...
     dislpayCount("!!");
     let soundFail = new Audio("sounds/sound.mp3");
     soundFail.play();
+    START.classList.remove("selected");
   }
   if (sequence.length == sequenceIndex) {
     USER_TURN = false;

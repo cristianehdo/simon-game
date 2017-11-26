@@ -9,10 +9,11 @@ const CARDS = {
 const speedBtn = document.querySelectorAll('.speed');
 
 const cards = document.querySelectorAll(".card");
-const start = document.getElementById("start");
+const START = document.getElementById("start");
 const NUMBERS = ["zero", "one", "two", "three", "four"];
 
 start.addEventListener("click", () => {
+  start.classList.add("selected");
   startGame();
 });
 

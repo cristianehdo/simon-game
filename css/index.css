@@ -8,8 +8,8 @@
   text-align: center;
   position: relative;
 }
-.my-container h2 {
-  padding: 30px;
+.my-container h3 {
+  padding: 20px;
 }
 .panel-card {
   width: 550px;
@@ -17,14 +17,6 @@
   align-items: center;
   justify-content: space-between;
   margin-bottom: 30px;
-}
-
-.buttons {
-  display: flex;
-  align-items: center;
-}
-.buttons span {
-  padding-right: 8px;
 }
 
 
