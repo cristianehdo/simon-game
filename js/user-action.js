@@ -7,8 +7,6 @@ const CARDS = {
 }
 
 const speedBtn = document.querySelectorAll('.speed');
-
-const cards = document.querySelectorAll(".card");
 const START = document.getElementById("start");
 const NUMBERS = ["zero", "one", "two", "three", "four"];
 
@@ -17,22 +15,40 @@ start.addEventListener("click", () => {
   startGame();
 });
 
-const getSelectedCard = (card) => {
-  NUMBERS.forEach((number) => {
-    if (card.classList.contains(number)) {
-      animateCard(card, number);
-      verifySequence(number);
-    }
-  });
-};
+// const getSelectedCard = (card) => {
+//   NUMBERS.forEach((number) => {
+//     if (card.classList.contains(number)) {
+//       animateCard(card, number);
+//       verifySequence(number);
+//     }
+//   });
+// };
 
-cards.forEach((card) => {
-  card.addEventListener("click", (event) => {
+  CARDS["one"].addEventListener("click", (event) => {
     if (USER_TURN === true) {
-      getSelectedCard(event.currentTarget);
+      animateCard(CARDS["one"], "one");
+      verifySequence("one");
     }
   });
-});
+  CARDS["two"].addEventListener("click", (event) => {
+    if (USER_TURN === true) {
+      animateCard(CARDS["two"], "two");
+      verifySequence("two");
+    }
+  });
+  CARDS["three"].addEventListener("click", (event) => {
+    if (USER_TURN === true) {
+      animateCard(CARDS["three"], "three");
+      verifySequence("three");
+    }
+  });
+  CARDS["four"].addEventListener("click", (event) => {
+    if (USER_TURN === true) {
+      animateCard(CARDS["four"], "four");
+      verifySequence("four");
+    }
+  });
+
 
 speedBtn.forEach((btn) => {
   btn.addEventListener("click", (event) => {
