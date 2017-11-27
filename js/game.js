@@ -6,18 +6,23 @@ let count;
 let sequenceIndex;
 let USER_TURN = false;
 let SPEED = 1000;
+// const sounds = {
+//   "one": "simonSound1.mp3",
+//   "two": "simonSound2.mp3",
+//   "three": "simonSound3.mp3",
+//   "four": "simonSound4.mp3",
+//   "failure": "failure.mp3"
+// }
+
 const sounds = {
-  "one": "simonSound1.mp3",
-  "two": "simonSound2.mp3",
-  "three": "simonSound3.mp3",
-  "four": "simonSound4.mp3",
-  "failure": "failure.mp3"
+  "one": new Audio('sounds/simonSound1.mp3'),
+  "two": new Audio('sounds/simonSound2.mp3'),
+  "three": new Audio('sounds/simonSound2.mp3'),
+  "four": new Audio('sounds/simonSound2.mp3'),
+  "failure": new Audio('sounds/failure.mp3')
 }
 
-
-const makeSound = (name) => {
-  let soundPath = sounds[name];
-  let sound = new Audio('sounds/' + soundPath);
+const makeSound = (sound) => {
     sound.play();
 }
 
@@ -27,7 +32,7 @@ const unAnimateCard = (card) => {
 }
 
 const animateCard = (card, number) => {
-  makeSound(number);
+  makeSound(sounds[number]);
   card.classList.add("card-active");
   setTimeout(function () {
     unAnimateCard(card)
