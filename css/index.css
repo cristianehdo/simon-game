@@ -18,12 +18,13 @@
 
 @media (max-width: 640px) {
   .my-container {
-    width: 375px;
+    width: 365px;
   }
   .panel-card {
-    width: 375px;
+    width: 365px;
     flex-wrap: wrap;
     justify-content: space-around;
+    margin-bottom: 15px;
   }
 }
 
@@ -35,3 +36,9 @@
     width: 300px;
   }
 }
+
+.title {
+  font-size: 28px;
+  padding: 14px;
+  }
+
